@@ -24,4 +24,3 @@ def is_prime(l):
     
     return primes
 
-print(max(is_prime(factor_gen(___))))
