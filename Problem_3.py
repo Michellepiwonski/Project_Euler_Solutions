@@ -24,3 +24,4 @@ def is_prime(l):
     
     return primes
 
+# code is too slow for 600851475143 
