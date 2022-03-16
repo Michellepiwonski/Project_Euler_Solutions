@@ -6,13 +6,15 @@ def reverser(n):
     return n [::-1]
 
 def palindrome():
+    palindrome_list=[]
     a = 999
-    b = 999
-    while b >= 1:
-        while a >= 1:
+    while a >= 1:
+        b = 999
+        while b >= 1:
             if str(a * b) == reverser(str(a * b)):
-                return str(a * b)
-            a -= 1
-        b -= 1
+                palindrome_list.append(a * b)
+            b -= 1
+        a -= 1
+    return max(palindrome_list)
 
 print(palindrome())
