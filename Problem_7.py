@@ -4,16 +4,17 @@
 def prime_gen():
     list_of_primes = []
     while len(list_of_primes) != 10001:
-        i = 2
-        x = 1
-        while x <= i:
-            factor_holder = []
-            if i % x == 0:
-                factor_holder.append(x)
-            if factor_holder == [1, x]:
-                list_of_primes.append(i)
-            x += 1
-        i += 1
+        p = 2
+        i = 1
+        while p >= i:
+            hold = []
+            if p % i == 0:
+                hold.append(i)
+            i += 1
+
+            if hold == [1, p]:
+                list_of_primes.append(p)
+            p += 1
     return list_of_primes[-1]
 
 print(prime_gen())
