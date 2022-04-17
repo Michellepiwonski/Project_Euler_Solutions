@@ -3,18 +3,15 @@
 
 def prime_gen():
     list_of_primes = []
-    while len(list_of_primes) != 10001:
+    while len(list_of_primes) < 10001:
         p = 2
-        i = 1
-        while p >= i:
+        for i in range(1, p+1):
             hold = []
             if p % i == 0:
                 hold.append(i)
-            i += 1
-
-            if hold == [1, p]:
-                list_of_primes.append(p)
-            p += 1
+        if hold == [1, p]:
+            list_of_primes.append(p)
+        p += 1
     return list_of_primes[-1]
 
 print(prime_gen())
